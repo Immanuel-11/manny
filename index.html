@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <title>DS</title>
+        <style>
+            #contn{
+                padding-top:2%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            #navhead{
+                padding: 0% 2% 0% 5%;
+            }
+            #navhead h2 a{
+                text-decoration: none;
+            }
+            #nav{
+                position: relative;
+                list-style-type: none;
+                display:flex;
+                flex-direction: row;
+                
+            }
+            #nav li{
+                padding-right: 2%;                              
+                padding-left: 5%;
+            }
+            #nav li a{
+                text-decoration:none;
+            }
+            #navl{
+                padding-left: 9%;
+                list-style-type: none;
+                float: right;
+                display: flex;
+                flex-wrap:wrap;
+            }
+            #navl li{
+                padding: 6%;
+                margin:2%;
+            }
+            #bs{
+                margin:2%;
+                background-color: rgb(209, 209, 209);
+                font-size: 120%;
+                padding: auto;
+                color:rgb(122, 122, 122);
+                text-decoration: none;
+                padding: 7% 14% 7% 14%;
+                border-radius: 11%;
+            }
+            #bs:hover{
+                background-color:rgb(122, 122, 122);
+                box-shadow: 5px 10px 4px black;
+                color: white;
+                font-weight: bold;
+            }
+            #sb{
+                margin:2%;
+                background-color:rgb(209, 209, 209);
+                font-size: 120%;
+                padding: auto;
+                color:rgb(122, 122, 122);
+                text-decoration: none;
+                padding: 7% 19% 7% 24%;
+                border-radius: 8%;
+            }
+            #sb:hover{
+                background-color: rgb(122, 122, 122);
+                box-shadow: 5px 10px 4px black;
+                color: white;
+                font-weight: bold;
+            }
+            #but{
+                padding:1%;
+                font-size: large;
+                background-color: rgb(34, 30, 30);
+                color:blanchedalmond;
+                border-radius: 13%;
+                text-decoration: none;
+                margin-top:1%;
+                margin-left:4.6%;
+            }
+            #but:hover{
+                cursor: pointer;
+                background-color: blanchedalmond;
+                color: black;
+                box-shadow: 0px 0px 12px 2px black;
+                font-weight: bold;
+            }
+            .tom{
+                height:288.75px;
+                width:272.5px;
+                margin-left: 6%;
+            }
+            .imag{
+                z-index:3;
+                -ms-transform: rotate(20deg); 
+                transform: rotate(-20deg);
+                position: relative;
+                height:278.75px;
+                width:228.75px;
+                margin-left: 8%;
+            }
+            .shad{
+                z-index: 2;
+                position: relative;
+                background-color: blue;
+                height:278.75px;
+                width:228.75px;
+                -ms-transform: rotate(20deg); 
+                transform: rotate(-12deg);
+                margin-top:-25%;
+                margin-left:39%;
+            }
+            .shad2{
+                z-index: 1;
+                position: relative;
+                background-color: orange;
+                height:278.75px;
+                width:228.75px;
+                -ms-transform: rotate(20deg); 
+                transform: rotate(0deg);
+                margin-left:41%;
+                margin-top:-24%;
+            }
+            .article-image {
+                height:425px;
+                width:666px;   
+                border-radius:4%;
+                -webkit-filter: grayscale(100%) blur(1px);
+                filter: grayscale(100%) blur(0.5);
+                transition: .4s ease-in-out;
+            }
+            .article-image:hover {
+                height: 531.25px;
+                width: 832.5px;
+                background-repeat: no-repeat;
+                position: relative;
+                background-size: cover;
+                -webkit-filter: grayscale(100%) blur(0);
+                filter: grayscale(0%) blur(0);
+                transition: .4s ease-in-out;
+                cursor: pointer;
+            }
+            .ar-image {
+                position: relative;
+                width: 238px;
+                height: 150px;
+            }
+            .article-image > h1 {
+                display: none;
+            }
+            .article-image:hover > h1 {
+                position: absolute;
+                top: 40%;
+                display: block;
+                color: #ffffff;
+                font-size: 250%;
+                font-weight: bold;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: .4s ease-in-out;
+            }
+            #pret{
+                top: 60%;
+                position: relative;
+                color:aqua;
+                font-size:200%;
+                display: flex;
+                justify-content: center;
+            }
+            #com{
+                top:65%;
+                position:relative;
+                left:57%;
+                font-size:180%;
+            }
+            /*.triangle-top{
+                z-index: 3;
+                position: relative;
+                width: 0;
+                height: 0;
+                border-top: 100px solid red;
+                border-right: 100px solid transparent;
+            }
+            .triangle-bottom{
+                z-index: 2;
+                position: relative;
+                width: 0;
+                height: 0;
+                border-bottom: 100px solid red;
+                border-right: 100px solid transparent;
+                margin-top:-100px;
+            }*/
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav id="contn" class="navbar">
+                <div id="navhead" class="navbar-header">
+                    <h2><a href="#">Manny.in</a></h2>
+                </div>
+                <ul id="nav" class="navbar-nav">
+                    <li><a href="#" >HOME</a></li>
+                    <li><a href="#" >FEATURES</a></li>
+                    <li><a href="#" >SERVICES</a></li>
+                    <li><a href="#" >PRICING</a></li>
+                    <li><a href="#" >ABOUT</a></li>
+                </ul>
+                <ul id="navl" class="navbar-right">
+                    <li><a href="#" id="bs">SignUp</a></li>
+                    <li></li>
+                    <li><a href="#" id="sb">SignIn</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main><br><br>
+            <section>
+                <div class="row">
+                    <div class="col-md-4" style="padding-left: 17%;">
+                        <article>
+                            <div class="container">
+                                <h1>Drawing Studio</h1>
+                                <h2>&nbsp;&nbsp;&nbsp;&nbsp;<sup>-for your potraits</sup></h2>
+                                <button href="#" id="but">Lets draw</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-8">
+                        <article>
+                            <div class="container"> 
+                                <img class="tom" src="peaky-removebg-preview.png">
+                                <img class="imag" src="images.jpg" >
+                                <div class="shad">.</div>
+                                <div class="shad2">.</div>
+                            </div>
+                        </article>
+                    </div>
+                </div><br><br>
+                <article>
+                    <div class="container" style="display: flex; flex-direction:column;align-items: center;">
+                    <h4>You're COOL</h4>
+                    <h1>Dude!</h1>
+                    <h4><small>yep,</small>Your potraits will be drawn here...,</h4>
+                    
+                    </div>
+                </article>
+
+                <!--article>
+                    <div class="container">
+                        <div class="triangle-top"></div>
+                        <div class="triangle-bottom"></div>
+                    </div>
+                </article--><br><br>
+                <article><div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="container" >
+                                <div class="ar-image">
+                                   <div id="dany" style=" background-image:url('g-host-lee-daenerys-deieneris-targarien-drakon-fantasy-daene.jpg');" class="article-image">
+                                        <h1>"Greater"</h1>
+                                        <h2 id="pret">As prettiest as you are !</h2>
+                                        <button class="btn btn-info" id="com">Come on </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="container">
+                                <img src="d1983c92f78b2cb05c035092a60e75ef-removebg-preview.png" height="299px" width="364px" style="margin-top: 7%; margin-left: 4%;">
+                            </div>
+                        </div>
+                    </div></div>
+                </article>
+                <div class="container" style="margin-top: 15%;">
+                    <div class="row">
+                        <div class="col-md-4">   
+                            <div style="display: flex; justify-content: center;">  
+                                <img src="client-photo.png" height="398.5px" width="216.5px">    
+                            </div>                   
+                        </div>
+                        <div class="col-md-2">
+                            <div style="margin-top: 84%;">
+                                <img src="Untitled-removebg-preview.png">
+                            </div>
+                        </div>
+                        <div class="col-md-6">  
+                            <div style="display:flex; justify-content:center;align-items:center;">
+                                <img src="Best-Paper-for-Prismacolor-Pencil.jpg" style=" border-radius: 5%;">
+                            </div>        
+                            <p style="padding-left: 12%; padding-top: 3%; font-size:160%">We draw "YOU" :)</p>
+                        </div>
+                    </div><br><br>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6" style="margin-top:2%;display: flex; justify-content: center; align-items: center;">
+                                <p style="font-size:160%"><b>Cool right,</b> What next then,</p>
+                                <img src="delivery-service-courier-scooter-fast-delivery-urgent-delivery-orders-round-clock-work-courier-bears-parcel_130740-1559.jpg">
+                                <p style="font-size:160%">Yep,<i>DELIVERY</i> absolutely</p>
+                            </div>
+                            <div class="col-md-6">
+                                <blockquote class="blockquote text-right">
+                                    <p class="mb-0">My Friend, </p>
+                                    <p>We send your <i>Stunning drawn Potrait</i> with your priscribed style and the way you told us. The real drawn potrait will arive you soon... at/on the time . </p>
+                                    <p>Then what are you waiting ffooooooooooorrrrrr??...,<br> Go > SignUp > Subscribe Us > Select the type of drawing > upload your potrait > select your style > Get your DRAWING by delivery :)</p>
+                                    <footer class="blockquote footer">With Love, <br><cite title="source title">MANNY</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                </div>
+                
+
+            </section>
+        </main>
+        <div style="background-image: linear-gradient(white, #000033); padding-top:1%;">
+            .
+        </div>
+        <footer style="background-color: #000033;"><br>
+            <div class="container">
+                <button class="btn btn-default" style="margin-left: 45%; color: snow; background-color: red; padding: 0.5%; border: 0px;margin-bottom: 2%;">SUBSCRIBE</button>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div style="display: flex;justify-content: center; margin-top: 5%;">
+                            <h3 style="color:rgb(255, 174, 0);"># Manny.in</h3>
+                            <ul style="list-style-type: none;">
+                                <li style="padding: 8%;"><a href="#" style=" color:aqua;">Features</a></li>
+                                <li style="padding: 8%;"><a href="#" style=" color:aqua;">Pricing</a></li>
+                                <li style="padding: 8%;"><a href="#" style=" color:aqua;">Service</a></li>
+                                <li style="padding: 8%;"><a href="#" style=" color:aqua;">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div style="display: flex; flex-direction:column; align-items: center ; color:chartreuse;">
+                            <h4 style=" color:orangered;">Contact US </h4>
+                            <p>No:7,</p>
+                            <p>Dubai kurukku Sandhu,</p>
+                            <p>dubai 4-aavadhu theru,</p>
+                            <p>Madurai.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div style="display: flex; justify-content:center; align-items: center;">
+                            <h1 style="color: red;">Manny.in</h1>
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+        </footer>
+    </body>
+</html>
